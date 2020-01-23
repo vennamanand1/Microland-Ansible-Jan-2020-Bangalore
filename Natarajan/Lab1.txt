@@ -35,9 +35,9 @@ sudo ansible localhost -m git -a "repo=https://github.com/scmgalaxy/ansible-role
 
 Program 9 – Write a Ansible commands to reboot a self machine.
 ==========================================================
-ansible localhost -m reboot -a"pre_reboot_delay=0"
+ansible localhost -m reboot -a "pre_reboot_delay=0" -b
 
 Program 10 – Write a Ansible commands to touch a file called “devopsschool.txt” in /opt/ and delete after using ansible adhoc command.
 ==========================================================
 sudo ansible localhost -m file -a "dest=/opt/devopsschool.txt state=touch" -b
-sudo ansible localhost -m file -a"path=/opt/devopsschool.txt state=absent"
+sudo ansible localhost -m file -a "path=/opt/devopsschool.txt state=absent" -b
