@@ -403,3 +403,11 @@ ansible localhost -m service -a"name=httpd state=started" -b
 
 Please fill this From
 http://bit.ly/3aA2LBv
+
+
+Repo Link
+http://bit.ly/2RGkyyl
+
+Lab 1
+=================
+https://www.devopsschool.com/blog/ansible-adhoc-commands-lab-excercise-part-1/
