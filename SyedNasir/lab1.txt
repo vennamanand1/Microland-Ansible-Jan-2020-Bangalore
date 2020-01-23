@@ -9,8 +9,7 @@ ansible localhost -m lineinfile -a"dest=/var/www/html/index.html line='this i
 s ansible training'" -b
 ansible localhost -m copy -a"dest=/var/www/html/second.html content='this is 
 ansible training and file name is second html file'" -b
-ansible localhost -m yum -a"name=git state=installed" -b
-ansible localhost -m yum -a"name=wget state=installed" -b
+ansible localhost -m yum -a"name='git,wget' state=installed" -b
 ansible localhost -m git -a"repo=https://github.com/scmgalaxy/ansible-role-te
 mplate dest=/home/ruser/test1 clone=yes"
 ansible localhost -m git -a"rebot= "
