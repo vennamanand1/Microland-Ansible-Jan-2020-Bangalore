@@ -411,3 +411,101 @@ http://bit.ly/2RGkyyl
 Lab 1
 =================
 https://www.devopsschool.com/blog/ansible-adhoc-commands-lab-excercise-part-1/
+
+
+IP  - 13.232.4.11
+User Name - ec2-user
+Key - rajesh-mumbai.pem
+
+
+ansible localhost -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible localhost -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible localhost -m service -a"name=httpd state=started" -b -u ec2-user --key-file=rajesh-mumbai.pem
+
+
+ansible 13.232.4.11 -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+
+group   
+    group of hosts of inventory.
+    Default group       
+                all
+                ungroup
+
+ansible all -i  13.232.4.11, -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible all -i  13.232.4.11, -m service -a"name=httpd state=started" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible all -i  13.232.4.11, -m copy -a"dest=/var/www/html/ src=index.html" -b -u ec2-user --key-file=rajesh-mumbai.pem
+
+
+ansible all -i  13.232.4.11,4.5.5.5,4.4.4.4,5.6.6.6,4.5.5.5,4.4.4.4,5.6.6.6,4.5.5.5,4.4.4.4,5.6.6.6,4.5.5.5,4.4.4.4,5.6.6.6,4.5.5.5,4.4.4.4,5.6.6.6,4.5.5.5,4.4.4.4,5.6.6.6,4.5.5.5,4.4.4.4,5.6.6.6,4.5.5.5,4.4.4.4,5.6.6.6,4.5.5.5,4.4.4.4,5.6.6.6, -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+
+Inventory - file
+===========================
+it INI FORMAT
+it has hosts ip address sep by new line.
+it has custome group
+-----------------
+it has group of group
+it has varrables
+it has BEHAVIOURAL Parameters
+
+---------------------------
+13.232.4.11
+13.233.144.140
+
+
+
+ansible all -i  inventory -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible all -i  inventory -m service -a"name=httpd state=started" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible all -i  inventory -m copy -a"dest=/var/www/html/ src=index.html" -b -u ec2-user --key-file=rajesh-mumbai.pem
+
+
+ansible all -i  inventory.txt -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+
+invent_group
+---------------------------
+[web]
+13.232.4.11
+
+[db]
+13.233.144.140
+server1
+server2
+server3
+
+[app]
+ddb1
+db2
+db3
+
+ansible web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible db,web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+
+
+
+ansible web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible db,web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible db,web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible db,web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible db,web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pemansible web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible db,web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible db,web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pemansible web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible db,web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible db,web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible db,web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pemansible web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible db,web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible db,web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+
+ansible web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible db,web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible db,web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+ansible db,web -i invent_group -m yum -a"name=httpd state=installed" -b -u ec2-user --key-file=rajesh-mumbai.pem
+
