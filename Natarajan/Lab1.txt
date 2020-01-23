@@ -23,3 +23,21 @@ age</h1>' create=yes" -b
 Program 6 – Write a Ansible commands to copy a file called “second.html” in /var/www/html/second.html with some dummy html contents.
 ==========================================================
 sudo ansible localhost -m copy -a "dest=/var/www/html/second.html src=/var/www/html/index.html" -b
+
+Program 7 – Write a Ansible commands to install a package called “git”, “wget”.
+==========================================================
+sudo ansible localhost -m yum -a "name=git state=installed" -b
+sudo ansible localhost -m yum -a "name=wget state=installed" -b
+
+Program 8 – Write a Ansible Adhoc commands to clone git repo. https://github.com/scmgalaxy/ansible-role-template.
+==========================================================
+sudo ansible localhost -m git -a "repo=https://github.com/scmgalaxy/ansible-role-template dest=/MyRepo" -b
+
+Program 9 – Write a Ansible commands to reboot a self machine.
+==========================================================
+ansible localhost -m reboot -a"pre_reboot_delay=0"
+
+Program 10 – Write a Ansible commands to touch a file called “devopsschool.txt” in /opt/ and delete after using ansible adhoc command.
+==========================================================
+sudo ansible localhost -m file -a "dest=/opt/devopsschool.txt state=touch" -b
+sudo ansible localhost -m file -a"path=/opt/devopsschool.txt state=absent"
