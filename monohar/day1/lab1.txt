@@ -22,7 +22,7 @@ Ans: ansible localhost -m blockinfile -a "path=/var/www/html/index.html create=y
 
 Program 6 – Write a Ansible commands to copy a file called “second.html” in /var/www/html/second.html with some dummy html contents.
 
-Ans: ansible localhost -m copy -a "dest=/var/www/html/ src=." -b
+Ans: ansible localhost -m copy -a "dest=/var/www/html/ src=second.html" -b
 
 Program 7 – Write a Ansible commands to install a package called “git”, “wget”.
 
