@@ -1,1 +1,7 @@
-adhoc
+sudo ansible localhost -m group -a"name=deploy state=present" -b
+
+sudo ansible localhost -m user -a"name=deploy-user group=deploy state=present" -b
+
+ansible localhost -m yum -a"name=httpd state=installed" -b 
+
+ansible localhost -m service -a"name=httpd state=started enabled=yes"
