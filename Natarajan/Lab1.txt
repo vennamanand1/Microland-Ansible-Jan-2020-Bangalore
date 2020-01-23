@@ -4,6 +4,22 @@ sudo ansible localhost -m group -a "name=deploy" -b
 
 Program 2 – Write a Ansible Adhoc Commands to create a user called “deploy-user” which is part of group called “deploy” and with /bin/bash shell.
 ==========================================================
+sudo ansible localhost -m user -a "name=deploy-user group=deploy shell=/bin/bash" -b
 
+Program 3 – Write a Ansible Adhoc commands install package named “httpd” in RHEL/centos.
+==========================================================
+sudo ansible localhost -m yum -a "name=httpd state=installed install_weak_deps=yes" -b
 
+Program 4 – Write a Ansible Adhoc commands to start and enable the service named “httpd”
+==========================================================
+sudo ansible localhost -m service -a"name=httpd state=started" -b
 
+Program 5 – Write a Ansible commands to create a file called “index.html” in /var/www/html with some dummy html contents.
+==========================================================
+option 1: sudo ansible localhost -m copy -a "dest=/var/www/html/index.html content=dummy_text" -b
+option 2: sudo ansible localhost -m blockinfile -a "path=/var/www/html/index.html block='<h1>Welcome to my html p
+age</h1>' create=yes" -b
+
+Program 6 – Write a Ansible commands to copy a file called “second.html” in /var/www/html/second.html with some dummy html contents.
+==========================================================
+sudo ansible localhost -m copy -a "dest=/var/www/html/second.html src=/var/www/html/index.html" -b
