@@ -1,1 +1,3 @@
 
+ansible all -i  10.0.0.62, -m yum -a"name=httpd state=installed" -b -u ruser -k -K
+
