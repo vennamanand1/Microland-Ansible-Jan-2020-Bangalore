@@ -57,6 +57,13 @@ Program 7 – Write a Ansible commands to install a package called “git”, �
           
 Program 8 – Write a Ansible Adhoc commands to clone git repo. https://github.com/scmgalaxy/ansible-role-template.
 
+          A)     ansible localhost  -m git -a "repo='' " -become -K  
+          
+Program 9 – Write a Ansible commands to reboot a self machine.
+
+          A)     ansible localhost  -m shell -a "cmd='init 0'" -become -K 
+                 
+                 ansible localhost  -m reboot -become -K 
 
 
           
