@@ -1,1 +1,72 @@
+## Installing Ansible Completed...!
+
+Program 1 – Write a Ansible Adhoc Commands to create a group called “deploy
+
+            A)       ansible localhost  -m group -a"name=deploy state=present" -b -K
+
+
+
+Program 2 – Write a Ansible Adhoc Commands to create a user called “deploy-user” which is part of group called “deploy” and with /bin/bash shell.
+            
+            A)       ansible localhost  -m user -a "name=deploy-user group=deploy shell=/bin/bash" -b -K
+            Verify)  deploy-user:x:1001:1001::/home/deploy-user:/bin/bash
+            
+
+Program 3 – Write a Ansible Adhoc commands install package named “httpd” in RHEL/centos.
+            
+            A)       ansible localhost  -m yum -a "name=httpd state=present use_backend=yum" -become -K    
+            
+            Note: had to provide use_backend to support the yum selection
+            
+Program 4 – Write a Ansible Adhoc commands to start and enable the service named “httpd”
+
+            A)       ansible localhost  -m service -a "name=httpd state=started" -become -K
+            
+Program 5 – Write a Ansible commands to create a file called “index.html” in /var/www/html with some dummy html contents.
+
+            A)       ansible localhost  -m file -a "name=/var/www/html/index.html  state=touch" -become -K
+                          
+                        and
+                        
+                     ansible localhost  -m copy -a "content='<html><h1>Welcome Mr/Ms</h1></html>' dest=/var/www/html/index.html" -bec
+ome -K
+
+
+Program 6 – Write a Ansible commands to copy a file called “second.html” in /var/www/html/second.html with some dummy html contents.
+                        
+            Creating file manually :
+            
+            [ruser@Vlab-red026 ansible]$ cat > second.html
+            <html>                 
+            <title>
+                Hellooo
+            </title>
+            <body>
+                Dear Microlanders
+            </body>
+            </html>
+           
+           A)     ansible localhost  -m copy -a "src=/home/ruser/ansible/second.html  dest=/var/www/html" -become -K
+           
+           
+Program 7 – Write a Ansible commands to install a package called “git”, “wget”.
+
+
+          A)     ansible localhost  -m yum -a "name=git,wget state=present" -become -K  
+          
+          
+Program 8 – Write a Ansible Adhoc commands to clone git repo. https://github.com/scmgalaxy/ansible-role-template.
+
+
+
+          
+          
+          
+          
+
+
+
+
+
+
 
