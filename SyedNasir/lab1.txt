@@ -10,30 +10,6 @@ rhui-rhel-7-server-rhui-extras-rpms                                          | 2
 rhui-rhel-7-server-rhui-extras-source-rpms                                   | 2.1 kB  00:00:00     
 rhui-rhel-7-server-rhui-optional-debug-rpms                                  | 1.8 kB  00:00:00     
 rhui-rhel-7-server-rhui-optional-rpms                                        | 1.8 kB  00:00:00     
-rhui-rhel-7-server-rhui-optional-source-rpms                                 | 2.1 kB  00:00:00     
-rhui-rhel-7-server-rhui-rh-common-debug-rpms                                 | 2.1 kB  00:00:00     
-rhui-rhel-7-server-rhui-rh-common-rpms                                       | 2.1 kB  00:00:00     
-rhui-rhel-7-server-rhui-rh-common-source-rpms                                | 2.1 kB  00:00:00     
-rhui-rhel-7-server-rhui-rpms                                                 | 2.0 kB  00:00:00     
-rhui-rhel-7-server-rhui-source-rpms                                          | 2.1 kB  00:00:00     
-rhui-rhel-7-server-rhui-supplementary-debug-rpms                             | 2.1 kB  00:00:00     
-rhui-rhel-7-server-rhui-supplementary-rpms                                   | 2.0 kB  00:0
-rhui-rhel-server-rhui-rhscl-7-rpms                                           | 2.0 kB  00:00:00     
-rhui-rhel-server-rhui-rhscl-7-source-rpms                                    | 2.1 kB  00:00:00     
-(1/66): rhui-microsoft-azure-rhel7/primary                                   | 1.8 kB  00:00:00     
-(2/66): rhui-rhel-7-server-dotnet-rhui-debug-rpms/7Server/x86_64/group       |  124 B  00:00:00     
-(3/66): rhui-microsoft-azure-rhel7/updateinfo                                |   92 B  00:00:00     
-(4/66): rhui-rhel-7-server-dotnet-rhui-debug-rpms/7Server/x86_64/updateinfo  |  14 kB  00:00:00     
-(5/66): rhui-rhel-7-server-dotnet-rhui-debug-rpms/7Server/x86_64/primary     |  33 kB  00:00:00     
-(6/66): rhui-microsoft-azure-rhel7/group                                     |  124 B  00:00:00     
-(7/66): rhui-rhel-7-server-dotnet-rhui-rpms/7Server/x86_64/group             |  124 B  00:00:00     
-(8/66): rhui-rhel-7-server-dotnet-rhui-rpms/7Server/x86_64/updateinfo        |  31 kB  00:00:00     
-(9/66): rhui-rhel-7-server-dotnet-rhui-source-rpms/7Server/x86_64/updateinfo |   92 B  00:00:00     
-(10/66): rhui-rhel-7-server-dotnet-rhui-source-rpms/7Server/x86_64/primary   |  18 kB  00:00:00     
-(11/66): rhui-rhel-7-server-rhui-debug-rpms/7Server/x86_64/updateinfo        | 2.3 MB  00:00:00     
-(12/66): rhui-rhel-7-server-dotnet-rhui-rpms/7Server/x86_64/primary          |  82 kB  00:00:00     
-(13/66): rhui-rhel-7-server-rhui-debug-rpms
-Dependencies Resolved
 
 ====================================================================================================
  Package       Arch            Version                  Repository                             Size
@@ -49,3 +25,68 @@ Total download size: 547 k
 Downloading packages:
 Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
 wget-1.14-18.el7_6.
+
+Package wget-1.14-18.el7_6.1.x86_64 already installed and latest version
+Examining /var/tmp/yum-root-ArI985/epel-release-latest-7.noarch.rpm: epel-release-7-12.noarch
+Marking /var/tmp/yum-root-ArI985/epel-release-latest-7.noarch.rpm to be installed
+Resolving Dependencies
+--> Running transaction check
+---> Package epel-release.noarch 0:7-12 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+====================================================================================================
+ Package               Arch            Version         Repository                              Size
+====================================================================================================
+Installing:
+ epel-release          noarch          7-12            /epel-release-latest-7.noarch           24 k
+
+Transaction Summary
+====================================================================================================
+Install  1 Package
+
+Total size: 24 k
+Installed size: 24 k
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : epel-release-7-12.noarch                                                         1/1 
+  Verifying  : epel-release-7-12.noarch                                                         1/1 
+
+Installed:
+  epel-release.noarch 0:7-12                                                                        
+
+Complete!
+
+warning: epel-release-latest-7.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+package epel-release-7-12.noarch is already installed
+
+
+ansible 2.9.2
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/ruser/.ansible/plugins/modules', u'/usr/share/ansible/plu
+gins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible
+  python version = 2.7.5 (default, Jun 11 2019, 14:33:56) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+  
+  
+
+localhost | CHANGED => {
+    "ansible_facts": {
+        "pkg_mgr": "yum"
+    }, 
+    "changed": true, 
+    "changes": {
+        "installed": [
+            "httpd"
+        ]
+    }, 
+    "msg": "", 
+    "rc": 0, 
+    "results": [
+    
+    
