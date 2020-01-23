@@ -3,12 +3,9 @@ ansible localhost -m service -a"name=httpd state=started" -b
 ansible localhost -m group -a"name=deploy" -b
 ansible localhost -m user -a"name=deploy-user state=present group=deploy" -b
 ansible localhost -m service -a"name=httpd state=started enabled=yes" -b
-ansible localhost -m copy -a"dest=/var/www/html/index.html content='this is a
-nsible training'" -b
-ansible localhost -m lineinfile -a"dest=/var/www/html/index.html line='this i
-s ansible training'" -b
-ansible localhost -m copy -a"dest=/var/www/html/second.html content='this is 
-ansible training and file name is second html file'" -b
+ansible localhost -m copy -a"dest=/var/www/html/index.html content='this is ansible training'" -b
+ansible localhost -m lineinfile -a"dest=/var/www/html/index.html line='this is ansible training'" -b
+ansible localhost -m copy -a"dest=/var/www/html/second.html content='this is ansible training and file name is second html file'" -b
 ansible localhost -m yum -a"name='git,wget' state=installed" -b
 ansible localhost -m git -a"repo=https://github.com/scmgalaxy/ansible-role-te
 mplate dest=/home/ruser/test1 clone=yes"
