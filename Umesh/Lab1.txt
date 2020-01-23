@@ -1,1 +1,11 @@
-Hii Ansible.
+$ ansible localhost -m group -a"name=deploy state=present" -b
+$ ansible localhost -m user -a"name=deploy-user state=present group=deploy shell=/ban/bash" -b
+$ ansible localhost -m yum -a "name=httpd state=installed" -b
+$ ansible localhost -m service -a "name=httpd state=started" -b
+$ ansible localhost -m file -a"path=/var/www/html/index.html state=touch" -b
+$ ansible localhost -m copy -a"src=/var/www/html/index.html dest=/var/www/html/second.html" -b
+$ ansible localhost -m yum -a"name=git state=installed" -m yum -a"name=git state=installed" -b
+$ ansible localhost -m yum -a"name=wget state=installed" -b
+$ ansible localhost -m git -a"repo=https://github.com/scmgalaxy/ansible-role-template dest=localhost clone=yes" -b
+$ ansible localhost -m file -a"path=/opt/devopsschool.txt state=touch" -b
+$ ansible localhost -m file -a"path=/opt/devopsschool.txt state=absent" -b
