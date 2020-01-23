@@ -1,1 +1,32 @@
+Answer 1
+sudo ansible localhost -m group -a"name=deploy state=present" -b
 
+Answer 2
+sudo ansible localhost -m user -a"name=deploy-user state=present groups=deploy shell=/bin/bash" -b
+
+Answer 3
+sudo ansible localhost -m yum -a"name=httpd state=installed" -b
+
+Answer 4
+sudo ansible localhost -m service -a"name=httpd state=started enabled=yes" -b
+
+Answer 5
+sudo ansible localhost -m file -a"path=/var/www/html/index.html state=touch" -b
+sudo ansible localhost -m copy -a"content=abc dest=/var/www/html/index.html" -b
+
+Answer 6
+sudo ansible localhost -m copy -a"content=MyFile dest=/var/www/html/second.html" -b
+
+
+Answer 7
+sudo ansible localhost -m yum -a"name=git state=installed" -b
+sudo ansible localhost -m yum -a"name=wget state=installed" -b
+
+Answer 8
+sudo ansible localhost -m git -a"repo=https://github.com/scmgalaxy/ansible-role-template dest=." -b
+
+Answer 9
+sudo ansible localhost -m reboot
+
+Answer 10
+sudo ansible localhost -m file -a"path=/opt/devopsschool.txt state=absent" -b
