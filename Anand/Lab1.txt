@@ -1,1 +1,26 @@
+Program 1 – Write a Ansible Adhoc Commands to create a group called “deploy
+sudo ansible localhost -m group -a"name=deploy" -b
+
+Program 2 – Write a Ansible Adhoc Commands to create a user called “deploy-user” which is part of group called “deploy” and with /bin/bash shell.
+
+sudo ansible localhost -m user -a"group=deploy name=deploy-user shell=/bin/bash" -b
+
+Program 3 – Write a Ansible Adhoc commands install package named “httpd” in RHEL/centos.
+
+sudo ansible localhost -m yum -a"name=httpd state=installed install_weak_deps=yes"
+
+Program 4 – Write a Ansible Adhoc commands to start and enable the service named “httpd”
+
+sudo ansible localhost -m service -a"name=httpd state=started" -b
+
+Program 5 – Write a Ansible commands to create a file called “index.html” in /var/www/html with some dummy html contents
+sudo ansible localhost -m copy -a"dest=/var/www/html/first.html content=welcome" -b
+
+Program 6 – Write a Ansible commands to copy a file called “second.html” in /var/www/html/second.html with some dummy html contents.
+sudo ansible localhost -m copy -a"dest=/var/www/html/second.html src=/var/www/html/first.html" -b
+
+Program 7 – Write a Ansible commands to install a package called “git”, “wget”.
+
+sudo ansible localhost -m yum -a"name=git state=installed"
+sudo ansible localhost -m yum -a"name=wget state=installed"
 
