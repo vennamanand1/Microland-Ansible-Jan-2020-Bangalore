@@ -1,1 +1,51 @@
 this is test
+Loaded plugins: langpacks, product-id, search-disabled-repos
+rhui-microsoft-azure-rhel7                                                   | 2.1 kB  00:00:00     
+rhui-rhel-7-server-dotnet-rhui-debug-rpms                                    | 2.1 kB  00:00:00     
+rhui-rhel-7-server-dotnet-rhui-rpms                                          | 2.3 kB  00:00:00     
+rhui-rhel-7-server-dotnet-rhui-source-rpms                                   | 2.1 kB  00:00:00     
+rhui-rhel-7-server-rhui-debug-rpms                                           | 1.8 kB  00:00:00     
+rhui-rhel-7-server-rhui-extras-debug-rpms                                    | 1.8 kB  00:00:00     
+rhui-rhel-7-server-rhui-extras-rpms                                          | 2.0 kB  00:00:00     
+rhui-rhel-7-server-rhui-extras-source-rpms                                   | 2.1 kB  00:00:00     
+rhui-rhel-7-server-rhui-optional-debug-rpms                                  | 1.8 kB  00:00:00     
+rhui-rhel-7-server-rhui-optional-rpms                                        | 1.8 kB  00:00:00     
+rhui-rhel-7-server-rhui-optional-source-rpms                                 | 2.1 kB  00:00:00     
+rhui-rhel-7-server-rhui-rh-common-debug-rpms                                 | 2.1 kB  00:00:00     
+rhui-rhel-7-server-rhui-rh-common-rpms                                       | 2.1 kB  00:00:00     
+rhui-rhel-7-server-rhui-rh-common-source-rpms                                | 2.1 kB  00:00:00     
+rhui-rhel-7-server-rhui-rpms                                                 | 2.0 kB  00:00:00     
+rhui-rhel-7-server-rhui-source-rpms                                          | 2.1 kB  00:00:00     
+rhui-rhel-7-server-rhui-supplementary-debug-rpms                             | 2.1 kB  00:00:00     
+rhui-rhel-7-server-rhui-supplementary-rpms                                   | 2.0 kB  00:0
+rhui-rhel-server-rhui-rhscl-7-rpms                                           | 2.0 kB  00:00:00     
+rhui-rhel-server-rhui-rhscl-7-source-rpms                                    | 2.1 kB  00:00:00     
+(1/66): rhui-microsoft-azure-rhel7/primary                                   | 1.8 kB  00:00:00     
+(2/66): rhui-rhel-7-server-dotnet-rhui-debug-rpms/7Server/x86_64/group       |  124 B  00:00:00     
+(3/66): rhui-microsoft-azure-rhel7/updateinfo                                |   92 B  00:00:00     
+(4/66): rhui-rhel-7-server-dotnet-rhui-debug-rpms/7Server/x86_64/updateinfo  |  14 kB  00:00:00     
+(5/66): rhui-rhel-7-server-dotnet-rhui-debug-rpms/7Server/x86_64/primary     |  33 kB  00:00:00     
+(6/66): rhui-microsoft-azure-rhel7/group                                     |  124 B  00:00:00     
+(7/66): rhui-rhel-7-server-dotnet-rhui-rpms/7Server/x86_64/group             |  124 B  00:00:00     
+(8/66): rhui-rhel-7-server-dotnet-rhui-rpms/7Server/x86_64/updateinfo        |  31 kB  00:00:00     
+(9/66): rhui-rhel-7-server-dotnet-rhui-source-rpms/7Server/x86_64/updateinfo |   92 B  00:00:00     
+(10/66): rhui-rhel-7-server-dotnet-rhui-source-rpms/7Server/x86_64/primary   |  18 kB  00:00:00     
+(11/66): rhui-rhel-7-server-rhui-debug-rpms/7Server/x86_64/updateinfo        | 2.3 MB  00:00:00     
+(12/66): rhui-rhel-7-server-dotnet-rhui-rpms/7Server/x86_64/primary          |  82 kB  00:00:00     
+(13/66): rhui-rhel-7-server-rhui-debug-rpms
+Dependencies Resolved
+
+====================================================================================================
+ Package       Arch            Version                  Repository                             Size
+====================================================================================================
+Updating:
+ wget          x86_64          1.14-18.el7_6.1          rhui-rhel-7-server-rhui-rpms          547 k
+
+Transaction Summary
+====================================================================================================
+Upgrade  1 Package
+
+Total download size: 547 k
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+wget-1.14-18.el7_6.
